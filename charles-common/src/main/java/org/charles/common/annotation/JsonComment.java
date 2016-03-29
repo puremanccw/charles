@@ -1,4 +1,4 @@
-package com.charles.web.controller.common.annotation;
+package org.charles.common.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

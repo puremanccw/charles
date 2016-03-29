@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.lang.reflect.Field;
 import java.nio.charset.Charset;
 
+import org.charles.common.annotation.JsonComment;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.HttpOutputMessage;
 import org.springframework.http.MediaType;
@@ -17,7 +18,6 @@ import org.springframework.http.converter.HttpMessageNotWritableException;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.NameFilter;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.charles.web.controller.common.annotation.JsonComment;
 
 public class FastJsonCommentHttpMessageConverter extends
 		AbstractHttpMessageConverter<Object> {
