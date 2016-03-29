@@ -1,5 +1,7 @@
 package com.charles.dal.dataobject;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 public class MemberDO {
 	
 	private Integer id;
@@ -34,6 +36,6 @@ public class MemberDO {
 	
 	@Override
 	public String toString() {
-		return null;
+		return ToStringBuilder.reflectionToString(this);
 	}
 }

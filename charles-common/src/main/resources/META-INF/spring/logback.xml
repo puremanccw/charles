@@ -61,7 +61,7 @@
 		<level value="warn" />
 	</logger>
 	<logger name="java.sql">
-		<level value="warn" />
+		<level value="DEBUG" />
 	</logger>
 	<logger name="org.apache.commons">
 		<level value="warn" />

@@ -1,1 +1,1 @@
-$!result
+${username }
