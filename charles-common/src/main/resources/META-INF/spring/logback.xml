@@ -69,7 +69,7 @@
 	<logger name="org.springframework">
 		<level value="warn" />
 	</logger>
-
+	<logger name="com.charles.dal.dao" level="DEBUG"/>
 	<!-- root -->  
 	<root level="info">  
 		<appender-ref ref="CONSOLE-APPENDER" />

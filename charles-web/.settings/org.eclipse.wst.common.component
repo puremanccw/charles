@@ -8,6 +8,9 @@
         <dependent-module archiveName="charles-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/charles-common/charles-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="charles-dal-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/charles-dal/charles-dal">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="charles-web"/>
         <property name="java-output-path" value="/charles-web/target/classes"/>
     </wb-module>

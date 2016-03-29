@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.charles</groupId>
@@ -17,7 +17,10 @@
   	<charles.version>0.0.1-SNAPSHOT</charles.version>
   	<springframework.version>4.2.5.RELEASE</springframework.version>
   	<logback.extensions.version>0.1.1</logback.extensions.version>
-        
+    <mybatis.version>3.3.1</mybatis.version> 
+    <mysql.version>5.1.38</mysql.version>   
+    <mybatis.spring.version>1.2.4</mybatis.spring.version>
+    <common.lang3.version>3.4</common.lang3.version>
   </properties>
 	
 	<dependencyManagement>
@@ -48,6 +51,35 @@
                 <artifactId>logback-ext-spring</artifactId>
                 <version>${logback.extensions.version}</version>
             </dependency>
+            <dependency>
+				<groupId>aopalliance</groupId>
+				<artifactId>aopalliance</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis.spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${common.lang3.version}</version>
+			</dependency>
+			
+			
+			
+			
 			<!-- springframework dependency -->
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -106,14 +138,15 @@
 				<version>${charles.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>aopalliance</groupId>
-				<artifactId>aopalliance</artifactId>
-				<version>1.0</version>
+				<groupId>com.charles</groupId>
+				<artifactId>charles-dal</artifactId>
+				<version>${charles.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
   <modules>
   	<module>charles-web</module>
   	<module>charles-common</module>
+    <module>charles-dal</module>
   </modules>
 </project>
