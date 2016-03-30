@@ -31,7 +31,18 @@
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 	</appender>
-
+	
+	<appender name="DAEMON-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder charset="UTF-8" />
+		<file>D:/opt/logs/charles/daemon.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>D:/opt/logs/charles/daemon.log.%d{yyyy-MM-dd}</fileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</Pattern>
+		</layout>
+	</appender>
+	
 	<appender name="ERROR-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<encoder charset="UTF-8" />
 		<file>D:/opt/logs/charles/error.log</file>
@@ -56,6 +67,10 @@
 	<logger name="controller" additivity="false">
 		<level value="info" />
 	   <appender-ref ref="CONTROLLER-APPENDER" />
+	</logger>
+	<logger name="daemon" additivity="false">
+		<level value="info" />
+	   <appender-ref ref="DAEMON-APPENDER" />
 	</logger>
 	<logger name="org.mybatis">
 		<level value="warn" />

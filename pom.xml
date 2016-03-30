@@ -22,6 +22,7 @@
     <mybatis.spring.version>1.2.4</mybatis.spring.version>
     <common.lang3.version>3.4</common.lang3.version>
     <fastjson.version>1.2.8</fastjson.version>
+    <quartz.version>2.2.2</quartz.version>
   </properties>
 	
 	<dependencyManagement>
@@ -82,6 +83,11 @@
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>${quartz.version}</version>
+			</dependency>
 			
 			
 			
@@ -138,6 +144,15 @@
 				<artifactId>spring-web</artifactId>
 				<version>${springframework.version}</version>
 			</dependency>
+			<dependency>  
+	            <groupId>org.springframework</groupId>  
+	            <artifactId>spring-context-support</artifactId>  
+	            <version>${springframework.version}</version>  
+	        </dependency> 
+			
+			
+			
+			
 			<!-- self dependency -->
 			<dependency>
 				<groupId>com.charles</groupId>
@@ -149,11 +164,26 @@
 				<artifactId>charles-dal</artifactId>
 				<version>${charles.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.charles</groupId>
+				<artifactId>charles-engine</artifactId>
+				<version>${charles.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.charles</groupId>
+				<artifactId>charles-service</artifactId>
+				<version>${charles.version}</version>
+			</dependency>
+			
+			
+			
 		</dependencies>
 	</dependencyManagement>
   <modules>
   	<module>charles-web</module>
   	<module>charles-common</module>
     <module>charles-dal</module>
+    <module>charles-engine</module>
+    <module>charles-service</module>
   </modules>
 </project>
