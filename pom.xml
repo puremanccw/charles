@@ -169,11 +169,6 @@
 				<artifactId>charles-engine</artifactId>
 				<version>${charles.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>com.charles</groupId>
-				<artifactId>charles-service</artifactId>
-				<version>${charles.version}</version>
-			</dependency>
 			
 			
 			
@@ -184,6 +179,5 @@
   	<module>charles-common</module>
     <module>charles-dal</module>
     <module>charles-engine</module>
-    <module>charles-service</module>
   </modules>
 </project>
