@@ -32,8 +32,10 @@ public class ThreadPoolDemo {
            					TimeUnit.MICROSECONDS	微秒
            					TimeUnit.NANOSECONDS	纳秒
            	workQueue：		阻塞队列，用于存储等待执行的任务
-           					ArrayBlockingQueue
-           					LinkedBlockingqueue
+           					ArrayBlockingQueue		：基于数组实现的一个阻塞队列（先进先出），必须指定大小
+           					LinkedBlockingqueue		：基于链表实现的一个阻塞队列（先进先出），如果不指定大小，默认大小为Integer.MAX_VALUE
+           					PriorityBlockingQueue	:次队列为无界阻塞队列，按优先级顺序出队，
+           					DelayQueue				：基于PriorityQueue的一种延时的无界阻塞队列，DelayQueue中的元素只有当其指定延时时间到了才能从队列中获取该元素
            					SynchronousQueue
            	threadFactory:	线程工厂，用于创建线程
            	handler：		拒绝处理任务时的策略	
