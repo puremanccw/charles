@@ -13,7 +13,8 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	<!-- scan the package and the sub package -->
     <context:component-scan base-package="com.charles.web.controller"/>
- 
+ 	
+ 	
     <mvc:annotation-driven>
     	<mvc:message-converters register-defaults="true">
 		<bean
