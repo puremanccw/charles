@@ -1,4 +1,4 @@
-package com.charles.service.dubbo;
+package com.charles.facade.dubbo;
 
 public interface TestRegistryService {
 	

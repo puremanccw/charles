@@ -1,6 +1,7 @@
 package com.charles.service.dubbo.impl;
 
-import com.charles.service.dubbo.TestRegistryService;
+import com.charles.facade.dubbo.TestRegistryService;
+
 
 public class TestRegistryServiceImpl implements TestRegistryService {
 
