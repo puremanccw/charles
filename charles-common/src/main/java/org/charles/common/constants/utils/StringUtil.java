@@ -373,5 +373,52 @@ public class StringUtil {
     /*  以下方法用来比较两个字符串是否相同。                                        */
     /* ============================================================================ */
     
+    /**
+     * 比较两个字符串（大小写敏感）
+     * <pre>
+     * StringUtil.equals(null, null)   = true
+     * StringUtil.equals(null, "abc")  = false
+     * StringUtil.equals("abc", null)  = false
+     * StringUtil.equals("abc", "abc") = true
+     * StringUtil.equals("abc", "ABC") = false
+     * </pre>
+     * @param str1
+     * @param str2
+     * @return
+     */
+    public static boolean equals(String str1, String str2) {
+    	if(str1 == null) {
+    		return str2 == null;
+    	}
+    	
+    	return str1.equals(str2);
+    }
     
+    public static boolean equals(Number num, String str2) {
+    	String str1 = num + "";
+    	if(str1 == null) {
+    		return str2 == null;
+    	}
+    	return str1.equals(str2);
+    }
+    
+    /**
+     * 比较两个字符串（大小写不敏感）。
+     * <pre>
+     * StringUtil.equalsIgnoreCase(null, null)   = true
+     * StringUtil.equalsIgnoreCase(null, "abc")  = false
+     * StringUtil.equalsIgnoreCase("abc", null)  = false
+     * StringUtil.equalsIgnoreCase("abc", "abc") = true
+     * StringUtil.equalsIgnoreCase("abc", "ABC") = true
+     * </pre>
+     * @param str1
+     * @param str2
+     * @return
+     */
+    public static boolean equalsIgnoreCase(String str1, String str2) {
+    	if(str1 == null) {
+    		return str2 == null;
+    	}
+    	return str1.equalsIgnoreCase(str2);
+    }
 }
