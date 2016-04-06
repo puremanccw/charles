@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.005" errors="0" skipped="0" tests="1" name="com.charles.engine.AppTest">
+<testsuite failures="0" time="0.004" errors="0" skipped="0" tests="1" name="com.charles.engine.AppTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_43\jre\bin"/>
@@ -25,7 +25,7 @@
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 8"/>
-    <property name="classworlds.conf" value="D:\workspace-Git\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf598553365896799982.tmp"/>
+    <property name="classworlds.conf" value="D:\workspace-Git\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5691864249045120061.tmp"/>
     <property name="sun.jnu.encoding" value="GBK"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_43\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\NetSarang;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.6.0_43\bin;C:\Program Files\Java\jdk1.6.0_43\jre\bin;D:\apache-maven-3.2.5\bin;C:\Program Files\TortoiseSVN\bin;D:\apache-ant-1.9.6\bin;C:\Program Files\nodejs\;D:\mysql-5.6.19\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;C:\Users\puremancw\AppData\Roaming\npm;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,5 +60,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.005" classname="com.charles.engine.AppTest" name="testApp"/>
+  <testcase time="0.004" classname="com.charles.engine.AppTest" name="testApp"/>
 </testsuite>

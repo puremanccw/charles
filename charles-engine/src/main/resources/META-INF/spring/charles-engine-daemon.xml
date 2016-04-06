@@ -28,7 +28,7 @@
 	<!-- ========================================== -->
 	<bean id="daemonDemoTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="daemonDemoJob" />
-		<property name="cronExpression" value="* * 0/1 * * ?" />
+		<property name="cronExpression" value="* * 22 * * ?" />
 	</bean>
 	
 	<!-- ========================================== -->

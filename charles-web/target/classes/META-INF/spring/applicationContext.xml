@@ -12,5 +12,7 @@
 	<import resource="classpath:META-INF/spring/persistence.xml"/>
 	<import resource="classpath:META-INF/spring/charles-dal-dao.xml"/>
 	<import resource="classpath:META-INF/spring/charles-engine-daemon.xml"/>
+	<import resource="classpath:META-INF/spring/charles-dubbo.xml"/>
+	<import resource="classpath:META-INF/spring/charles-service.xml"/>
 </beans>
 	
