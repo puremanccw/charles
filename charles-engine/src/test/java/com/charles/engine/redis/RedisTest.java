@@ -19,7 +19,8 @@ public class RedisTest {
 	public void test1() {
 		//-----添加数据----------  
 		jedis.set("name","xinxin");//向key-->name中放入了value-->xinxin  
-	 	System.out.println(jedis.get("name"));//执行结果：xinxin  
+	 	System.out.println(jedis.get("name"));//执行结果：xinxin 
+	 	System.out.println(jedis.get("test"));
 	}
 	
 	

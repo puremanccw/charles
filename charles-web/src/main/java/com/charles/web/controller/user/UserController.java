@@ -49,7 +49,10 @@ public class UserController	extends BaseController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("usesrname", member.getUsername());
 		map.put("password", member.getPassword());
-		redisUtil.set("test", "puremancw");
+//		redisUtil.set("test", "puremancw");
+		String str = (String)redisUtil.get("test");
+		System.out.println(str);
+		map.put("tst", str);
 		return AjaxResult.succResult(map);
 	}
 }
