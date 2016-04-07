@@ -17,6 +17,9 @@
         <dependent-module archiveName="charles-service-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/charles-service/charles-service">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="charles-facade-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/charles-facade/charles-facade">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="charles-web"/>
         <property name="java-output-path" value="/charles-web/target/classes"/>
     </wb-module>

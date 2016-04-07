@@ -14,5 +14,6 @@
 	<import resource="classpath:META-INF/spring/charles-engine-daemon.xml"/>
 	<import resource="classpath:META-INF/spring/charles-dubbo.xml"/>
 	<import resource="classpath:META-INF/spring/charles-service.xml"/>
+	<import resource="classpath:META-INF/spring/charles-engine-redis.xml"/>
 </beans>
 	

@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.charles.dal.dao.MemberDAO;
 import com.charles.dal.dataobject.MemberDO;
+import com.charles.engine.redis.RedisUtil;
 import com.charles.web.controller.BaseController;
 import com.charles.web.controller.common.AjaxResult;
 
@@ -21,6 +22,9 @@ public class UserController	extends BaseController {
 	
 	@Resource
 	private MemberDAO memberDAO;
+	
+	@Resource
+	private RedisUtil redisUtil;
 //	@RequestMapping("/user")
 //	public ModelAndView test(Model model){
 //		ModelAndView mav = new ModelAndView();
@@ -45,6 +49,7 @@ public class UserController	extends BaseController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("usesrname", member.getUsername());
 		map.put("password", member.getPassword());
+		redisUtil.set("test", "puremancw");
 		return AjaxResult.succResult(map);
 	}
 }
