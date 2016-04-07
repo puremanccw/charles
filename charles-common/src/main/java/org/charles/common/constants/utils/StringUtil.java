@@ -421,4 +421,186 @@ public class StringUtil {
     	}
     	return str1.equalsIgnoreCase(str2);
     }
+    
+    /**
+     * 判断字符串是否只包含unicode数字
+     * <code>null</code>将返回<code>false</code>,<code>""</code>将返回<code>true</code>
+     * <pre>
+     * StringUtil.isNumeric(null)		=false
+     * StringUtil.isNumeric("")			=true
+     * StringUtil.isNumeric("  ")		=false
+     * StringUtil.isNumeric("123")		=true
+     * StringUtil.isNumeric("12 3")		=false
+     * StringUtil.isNumeric("ab2c")		=false
+     * StringUtil.isNumeric("12-3")		=false
+     * StringUtil.isNumeric("12.3")		=false
+     * </pre>
+     * @param str
+     * @return
+     */
+    public static boolean isNumeric(String str) {
+    	if(str == null) {
+    		return false;
+    	}
+    	
+    	int length = str.length();
+    	
+    	for(int i = 0; i < length; i++) {
+    		if(!Character.isDigit(str.charAt(i))) {
+    			return false;
+    		}
+    	}
+    	return true;
+    }
+    
+    /**
+     * 判断字符串是否只包含unicode数字和空格<code>' '</code>
+     * <pre>
+     * StringUtil.isNumericSpace(null)   = false
+     * StringUtil.isNumericSpace("")     = true
+     * StringUtil.isNumericSpace("  ")   = true
+     * StringUtil.isNumericSpace("123")  = true
+     * StringUtil.isNumericSpace("12 3") = true
+     * StringUtil.isNumericSpace("ab2c") = false
+     * StringUtil.isNumericSpace("12-3") = false
+     * StringUtil.isNumericSpace("12.3") = false
+     * </pre>
+     * @param str
+     * @return
+     */
+    public static boolean isNumericSpace(String str) {
+    	if(str == null) {
+    		return false;
+    	}
+    	
+    	int length = str.length();
+    	
+    	for(int i = 0; i < length; i++) {
+    		if(!Character.isDigit(str.charAt(i)) && (str.charAt(i) != ' ')) {
+    			return false;
+    		}
+    	}
+    	return true;
+    }
+    
+    /**
+     * 将字符串转换成大写
+     * 如果字符串是<code>null</code>则返回<code>null</code>。
+     * <pre>
+     * StringUtil.toUpperCase(null)  = null
+     * StringUtil.toUpperCase("")    = ""
+     * StringUtil.toUpperCase("aBc") = "ABC"
+     * </pre>
+     * @param str
+     * @return
+     */
+    public static String toUpperCase(String str) {
+    	if(str == null) {
+    		return null;
+    	}
+    	return str.toUpperCase();
+    }
+    
+    /**
+     * 将字符串转换成小写
+     * 如果字符串是<code>null</code>则返回<code>null</code>。
+     * <pre>
+     * StringUtil.toLowerCase(null)  = null
+     * StringUtil.toLowerCase("")    = ""
+     * StringUtil.toLowerCase("aBc") = "abc"
+     * </pre>
+     * @param str
+     * @return
+     */
+    public static String toLowerCase(String str) {
+    	if(str == null) {
+    		return null;
+    	}
+    	
+    	return str.toLowerCase();
+    }
+    
+    /**
+     * 将字符串的首字母转成大写<code>Character.toTilteCase</code>，其它字符不变
+     * <pre>
+     * StringUtil.capitalize(null)  = null
+     * StringUtil.capitalize("")    = ""
+     * StringUtil.capitalize("cat") = "Cat"
+     * StringUtil.capitalize("cAt") = "CAt"
+     * </pre>
+     * @param str
+     * @return
+     */
+    public static String capitalize(String str) {
+    	int strLen;
+    	if((str == null) || ((strLen = str.length()) == 0)) {
+    		return str;
+    	}
+    	
+    	return new StringBuffer(strLen).append(Character.toTitleCase(str.charAt(0))).append(str.substring(1)).toString();
+    }
+    
+    /**
+     * 将字符串的首字母转成小写<code>Character.toLowerCase</code>，其它字符不变
+     * @param str
+     * @return
+     */
+    public static String unCapitalize(String str) {
+    	int strLen;
+    	if((str == null) || ((strLen = str.length()) == 0)) {
+    		return str;
+    	}
+    	
+    	return new StringBuffer(strLen).append(Character.toLowerCase(str.charAt(0))).append(str.substring(1)).toString();
+    }
+    
+    /**
+     * 反正字符串的大小写
+     * <pre>
+     * StringUtil.swapCase(null)                 = null
+     * StringUtil.swapCase("")                   = ""
+     * StringUtil.swapCase("The dog has a BONE") = "tHE DOG HAS A bone"
+     * </pre>
+     * @param str
+     * @return
+     */
+    public static String swapCase(String str) {
+    	int strLen;
+    	if((str == null) || ((strLen = str.length()) == 0)) {
+    		return str;
+    	}
+    	
+    	StringBuffer buffer = new StringBuffer(strLen);
+    	
+    	char ch = 0;
+    	
+    	for(int i = 0; i < strLen; i++) {
+    		ch = str.charAt(i);
+    		
+    		if(Character.isUpperCase(ch)) {
+    			ch = Character.toLowerCase(ch);
+    		} else if(Character.isLowerCase(ch)) {
+    			ch = Character.toUpperCase(ch);
+    		} else if(Character.isTitleCase(ch)) {
+    			ch = Character.toLowerCase(ch);
+    		}
+    		
+    		buffer.append(ch);
+    	}
+		return buffer.toString();
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
