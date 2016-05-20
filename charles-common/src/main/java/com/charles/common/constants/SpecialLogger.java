@@ -1,4 +1,4 @@
-package org.charles.common.constants;
+package com.charles.common.constants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

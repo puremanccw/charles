@@ -1,4 +1,4 @@
-package org.charles.common.constants.utils;
+package com.charles.common.constants.utils;
 
 /**
  * 字符串处理工具类

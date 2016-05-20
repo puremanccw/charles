@@ -29,6 +29,9 @@
     <zkclient.version>0.1</zkclient.version>
     <spring.redis.version>1.6.4.RELEASE</spring.redis.version>
     <jedis.version>2.8.1</jedis.version>
+    <jsch.version>0.1.53.sp</jsch.version>
+    <apache.common-httpclient.version>3.1</apache.common-httpclient.version>
+		
   </properties>
 	
 	<dependencyManagement>
@@ -124,7 +127,16 @@
 				<artifactId>jedis</artifactId>
 				<version>${jedis.version}</version>
 			</dependency>
-			
+			<dependency>
+			  	<groupId>com.jcraft</groupId>
+			  	<artifactId>jsch</artifactId>
+			  	<version>${jsch.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-httpclient</groupId>
+				<artifactId>commons-httpclient</artifactId>
+				<version>${apache.common-httpclient.version}</version>
+			</dependency>
 			
 			
 			

@@ -1,4 +1,4 @@
-package org.charles.common.annotation;
+package com.charles.common.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

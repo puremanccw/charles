@@ -1,4 +1,4 @@
-package org.charles.common.constants.utils;
+package com.charles.common.constants.utils;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -47,5 +47,13 @@
 		<groupId>com.alibaba</groupId>
 		<artifactId>fastjson</artifactId>
 	</dependency>
+	<dependency>
+	  	<groupId>com.jcraft</groupId>
+	  	<artifactId>jsch</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>commons-httpclient</groupId>
+		<artifactId>commons-httpclient</artifactId>
+	</dependency>
   </dependencies>
 </project>
