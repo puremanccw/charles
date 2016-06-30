@@ -32,6 +32,7 @@
     <jsch.version>0.1.53.sp</jsch.version>
     <apache.common-httpclient.version>3.1</apache.common-httpclient.version>
 	<commons-net.version>3.3</commons-net.version>	
+	<groovy.version>2.3.3</groovy.version>
   </properties>
 	
 	<dependencyManagement>
@@ -141,6 +142,11 @@
 			  	<groupId>commons-net</groupId>
 			  	<artifactId>commons-net</artifactId>
 			  	<version>${commons-net.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.codehaus.groovy</groupId>
+			    <artifactId>groovy-all</artifactId>
+			    <version>${groovy.version}</version>
 			</dependency>
 			
 			

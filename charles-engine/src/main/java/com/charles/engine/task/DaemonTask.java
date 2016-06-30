@@ -1,6 +1,6 @@
 package com.charles.engine.task;
 
-import org.charles.common.constants.SpecialLogger;
+import com.charles.common.constants.SpecialLogger;
 
 
 public interface DaemonTask extends SpecialLogger {

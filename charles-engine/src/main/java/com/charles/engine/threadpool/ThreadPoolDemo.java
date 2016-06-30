@@ -45,7 +45,7 @@ public class ThreadPoolDemo {
            					ThreadPoolExecutor.CallerRunsPolicy		由调用线程处理该任务
 		 */
 		//创建线程池
-		ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 9, 200, TimeUnit.MINUTES, new ArrayBlockingQueue<Runnable>(5));
+		ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 15, 200, TimeUnit.MINUTES, new ArrayBlockingQueue<Runnable>(20));
 		//corePoolSize和maxinumPoolSize值是相等的，阻塞队列用的是LinkedBlockingQueue
 		ExecutorService executor1 = Executors.newFixedThreadPool(10);
 		//corePoolSize和maxinumPoolSize值均为1，阻塞队列用的是LinkedBlockingQueue

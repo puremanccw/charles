@@ -160,7 +160,22 @@ public class Money implements Serializable, Comparable<Object> {
 			throw new IllegalArgumentException("Money math currency mismatch.");
 		}
 	}
-
+	
+	/**
+	 * 货币累加
+	 * <p>
+	 * 如果两货币币种相同，则本货币对象的金额等于两货币对象金额之和，并返回本货币对象的引用。
+	 * 如果两货币对象币种不同，抛出<code>java.lang.IllegalArgumentException</code>
+	 * </p>
+	 * @param other	作为加数的货币对象
+	 * @return		累加后的本货币对象
+	 */
+	public Money addTo(Money other) {
+        assertSameCurrencyAs(other);
+        this.amount = this.amount.add(other.amount);
+        return this;
+    }
+	
 	public BigDecimal getAmount() {
 		return amount;
 	}
