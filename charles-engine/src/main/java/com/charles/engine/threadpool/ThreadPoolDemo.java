@@ -49,7 +49,7 @@ public class ThreadPoolDemo {
 		//corePoolSize和maxinumPoolSize值是相等的，阻塞队列用的是LinkedBlockingQueue
 		ExecutorService executor1 = Executors.newFixedThreadPool(10);
 		//corePoolSize和maxinumPoolSize值均为1，阻塞队列用的是LinkedBlockingQueue
-		ExecutorService executor4 = Executors.newSingleThreadExecutor();
+		ExecutorService executor4 = Executors.newSingleThreadExecutor(); 
 		//corePoolSize值为0，maxinumPoolSize值为Integer.MAX_VALUE，阻塞队列用的是SynchronousQueue
 		//来了任务就创建线程，线程空闲超过60s就销毁线程
 		ExecutorService executor2 = Executors.newCachedThreadPool();
