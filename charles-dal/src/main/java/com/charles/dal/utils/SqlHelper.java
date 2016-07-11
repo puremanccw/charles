@@ -124,7 +124,7 @@ public class SqlHelper {
 	 * 通过命名空间方式获取sql
 	 * @return
 	 */
-	private static String getNamespaceSql(SqlSession session, String namespace) {
+	public static String getNamespaceSql(SqlSession session, String namespace) {
 		return getNamespaceSql(session, namespace, null);
 	}
 	
