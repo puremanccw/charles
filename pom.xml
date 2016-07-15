@@ -254,5 +254,6 @@
     <module>charles-engine</module>
     <module>charles-service</module>
     <module>charles-facade</module>
+    <module>charles-test</module>
   </modules>
 </project>
