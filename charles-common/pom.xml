@@ -59,5 +59,9 @@
 	  	<groupId>commons-net</groupId>
 	  	<artifactId>commons-net</artifactId>
 	</dependency>
+	<dependency>
+	  <groupId>com.thoughtworks.xstream</groupId>
+	  <artifactId>xstream</artifactId>
+	</dependency>
   </dependencies>
 </project>

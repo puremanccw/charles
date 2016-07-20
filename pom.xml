@@ -34,6 +34,7 @@
 	<commons-net.version>3.3</commons-net.version>	
 	<groovy.version>2.3.3</groovy.version>
 	<quartz.version>2.2.3</quartz.version>
+	<xstream.version>1.4.8</xstream.version>
   </properties>
 	
 	<dependencyManagement>
@@ -159,7 +160,11 @@
 	            <artifactId>swagger-springmvc</artifactId>
 	            <version>0.9.5</version>
 	        </dependency>
-			
+			<dependency>
+			  <groupId>com.thoughtworks.xstream</groupId>
+			  <artifactId>xstream</artifactId>
+			  <version>${xstream.version}</version>
+			</dependency>
 			
 			
 			<!-- springframework dependency -->
