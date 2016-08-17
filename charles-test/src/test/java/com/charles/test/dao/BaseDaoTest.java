@@ -7,6 +7,7 @@ import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:META-INF/spring/persistence.xml", "classpath:META-INF/spring/charles-dal-dao.xml"})
 public class BaseDaoTest extends AbstractJUnit4SpringContextTests {
