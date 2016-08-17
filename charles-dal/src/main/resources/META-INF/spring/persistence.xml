@@ -18,9 +18,9 @@
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">   
 	    <!-- 基本属性 url、user、password -->  
 	    <!-- <property name="url" value="jdbc:oracle:thin:@192.168.110.30:1516:pay16db" /> -->  
-	    <property name="url" value="jdbc:mysql://localhost:3306/mysql" />
+	    <property name="url" value="jdbc:mysql://121.40.95.61:3306/workeasy" />
 	    <property name="username" value="root" />  
-	    <property name="password" value="lmj520" />  
+	    <property name="password" value="kgcs@168" />  
 	        
 	    <!-- 配置初始化大小、最小、最大 -->  
 	    <property name="initialSize" value="1" />  

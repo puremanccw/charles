@@ -11,4 +11,8 @@
     <bean id="memberDAO" class="org.mybatis.spring.mapper.MapperFactoryBean" parent="persist.mybatis.parentMapper">
         <property name="mapperInterface" value="com.charles.dal.dao.MemberDAO"/>
     </bean>
+    
+    <bean id="recruitDOMapper" class="org.mybatis.spring.mapper.MapperFactoryBean" parent="persist.mybatis.parentMapper">
+        <property name="mapperInterface" value="com.charles.dal.dao.RecruitDOMapper"/>
+    </bean>
 </beans>
