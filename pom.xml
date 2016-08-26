@@ -257,9 +257,63 @@
 				<artifactId>charles-facade</artifactId>
 				<version>${charles.version}</version>
 			</dependency>
-			
 		</dependencies>
 	</dependencyManagement>
+	
+	<build>
+		<plugins>
+	    	<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.0.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+	    	<plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-surefire-plugin</artifactId>
+	            <configuration>
+	                <testFailureIgnore>true</testFailureIgnore>
+	            </configuration>
+	        </plugin>
+    	</plugins>
+	</build>
+	
+	<distributionManagement>
+		<repository>
+			<id>deployRelease</id>
+			<url>http://121.40.95.61:8081/nexus/content/repositories/releases/</url>
+			<uniqueVersion>true</uniqueVersion>
+		</repository>
+		<snapshotRepository>
+			<id>deploySnapshot</id>
+			<url>http://121.40.95.61:8081/nexus/content/repositories/snapshots/</url>
+			<uniqueVersion>true</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+	
   <modules>
   	<module>charles-web</module>
   	<module>charles-common</module>
@@ -268,5 +322,6 @@
     <module>charles-service</module>
     <module>charles-facade</module>
     <module>charles-test</module>
+    <module>charles-integration</module>
   </modules>
 </project>
