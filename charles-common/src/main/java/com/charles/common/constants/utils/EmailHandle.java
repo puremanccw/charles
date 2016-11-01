@@ -1,5 +1,6 @@
 package com.charles.common.constants.utils;
 
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -212,5 +213,47 @@ public class EmailHandle {
         System.out.println("发送邮件成功！");
         transport.close();
         return true;
+    }
+    
+    /***以后需要两个参数：接收方地址 、 内容***/
+    public static void send(String subject, String toaddress,String content)throws Exception {
+
+            String hostName = ReadPropertity.getProperty("emailsmtp");
+            String fromAddress = ReadPropertity.getProperty("emailaddress");
+            String fromAPass = ReadPropertity.getProperty("emailpass");
+
+            EmailHandle emailHandle = new EmailHandle(hostName);
+            emailHandle.setFrom(fromAddress);
+            emailHandle.setNeedAuth(true);
+            emailHandle.setSubject(subject);
+            emailHandle.setBody(content);
+            emailHandle.setTo(toaddress);
+            emailHandle.setFrom(fromAddress);
+            emailHandle.addFileAffix("D:/Person.txt");// 附件文件路径
+            emailHandle.setNamePass(fromAddress, fromAPass);
+            emailHandle.sendEmail();
+    }
+    
+    public static void main(String[] args) {
+    	try {
+        	send("带附件的邮件测试","435832774@qq.com","测试内容");
+        } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+        }
+	}
+}
+class ReadPropertity {
+    static Properties props = new Properties();
+    static {
+            try {
+                    props.load(ReadPropertity.class.getClassLoader().getResourceAsStream(
+                                    "classpath:utils.properties"));
+            } catch (IOException e1) {
+                    e1.printStackTrace();
+            }
+    }
+    public static String getProperty(String key) {
+            return props.getProperty(key);
     }
 }
